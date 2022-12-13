@@ -15,7 +15,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "eShopAngular",
+            "prefix": "app",
             "style": "camelCase"
           }
         ],
@@ -23,7 +23,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "e-shop-angular",
+            "prefix": "app",
             "style": "kebab-case"
           }
         ]
