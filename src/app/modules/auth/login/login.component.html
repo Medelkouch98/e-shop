@@ -1,43 +1,33 @@
-<h1 class="text-center text-[1.75rem] pb-[2.75rem] font-bold italic font-serif">
-  Authentification
+<h1 class="text-center text-[1.75rem] py-[4rem] font-bold italic font-serif">
+  Authentication
 </h1>
-<div class="flex justify-between container mx-auto justify-">
+<div class="container flex justify-center mx-auto">
   <form class="mx-[2.75rem]">
-    <h1 class="text-center text-[1.75rem] font-medium italic font-serif">
+    <h1 class="text-center text-[1.75rem] font-[600] italic font-serif">
       Sign-in
     </h1>
     <div class="flex flex-col pt-4">
       <div class="flex flex-col">
-        <label class="italic font-serif">E-mail</label>
-        <input type="email" class="" />
+        <label class="font-serif italic">E-mail</label>
+        <input pInputText type="email" class="" />
       </div>
       <div class="flex flex-col pt-4">
-        <label class="italic font-serif">Password</label>
-        <input type="password" class="" />
+        <label class="font-serif italic">Password</label>
+        <input pInputText type="password" class="" />
       </div>
     </div>
     <div class="pt-6 text-center">
       <button
-        class="
-          italic
-          font-serif
-          py-2
-          px-4
-          bg-blue-500
-          text-white
-          font-semibold
-          rounded-lg
-          shadow-md
-          hover:bg-blue-700
-          focus:outline-none
-          focus:ring-2
-          focus:ring-blue-400
-          focus:ring-opacity-75
-        "
+        class="px-4 py-2 font-serif italic font-semibold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
       >
         Login
       </button>
     </div>
   </form>
+  <div class="flex">
+    <p-divider layout="vertical">
+      <b class="font-serif italic">OR</b>
+    </p-divider>
+  </div>
   <app-register></app-register>
 </div>

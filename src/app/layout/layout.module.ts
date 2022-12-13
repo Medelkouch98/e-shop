@@ -3,17 +3,26 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { LayoutComponent } from './layout.component';
 import { RouterModule, Routes } from '@angular/router';
-import { SplitButtonModule } from 'primeng/splitbutton';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('../modules/product/product.module').then(
+            (m) => m.ProductModule
+          ),
+      },
+    ],
   },
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes), SplitButtonModule],
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
   declarations: [HeaderComponent, LayoutComponent],
 })
 export class LayoutModule {}

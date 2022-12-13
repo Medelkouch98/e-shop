@@ -1,80 +1,28 @@
 <header>
-  <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+  <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 bg-gradient-to-t rounded-b-[7rem] from-cyan-300 to-blue-300">
     <div
-      class="
-        flex flex-wrap
-        mr-3
-        justify-between
-        items-center
-        mx-auto
-        max-w-screen-xl
-      "
+      class="flex flex-wrap items-center justify-end max-w-screen-xl mx-auto mr-3"
     >
-      <a href="https://flowbite.com" class="flex items-center">
-        <img
-          src="https://flowbite.com/docs/images/logo.svg"
-          class="mr-3 h-6 sm:h-9"
-          alt="Flowbite Logo"
-        />
-        <span
-          class="
-            self-center
-            text-xl
-            font-semibold
-            whitespace-nowrap
-            dark:text-white
-          "
-          >Flowbite</span
-        >
-      </a>
-      <div class="flex items-center  lg:order-2">
-        <a
-          [routerLink]="['/auth']"
-          class="
-            text-gray-800
-            dark:text-white
-            hover:bg-gray-50
-            focus:ring-4 focus:ring-gray-300
-            font-medium
-            rounded-lg
-            text-sm
-            px-4
-            lg:px-5
-            py-2
-            lg:py-2.5
-            mr-2
-            dark:hover:bg-gray-700
-            focus:outline-none
-            dark:focus:ring-gray-800
-          "
-        >
-          <i class="pi pi-sign-in"></i>
-          Log in
-        </a>
 
-        <p-splitButton
-          label="Primary"
-          styleClass="
-          p-button-text 
-          text-[#ffff]
-          p-button-secondary
-          text-gray-800
-          dark:text-white
-          hover:bg-gray-50
-          font-medium
-          rounded-lg
-          text-sm
-          px-4
-          lg:px-5
-          py-2
-          lg:py-2.5
-          mr-2
-          dark:hover:bg-gray-800
-          focus:outline-none
-          dark:focus:ring-gray-800
-          "
-        ></p-splitButton>
-        >
+      <div class="flex items-center lg:order-2">
+        <p-button
+          icon="pi pi-sign-in"
+          class="mr-5"
+          styleClass="p-button-rounded"
+          (click)="login()"
+        ></p-button>
+
+        <p-button
+          icon="pi pi-shopping-cart"
+          styleClass="p-button-rounded"
+          (click)="op.toggle($event)"
+        ></p-button>
+
+        <p-overlayPanel #op [style]="{ width: '450px' }">
+          <ng-template pTemplate>
+            <app-cart></app-cart>
+          </ng-template>
+        </p-overlayPanel>
       </div>
     </div>
   </nav>
