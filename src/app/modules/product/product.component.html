@@ -1,3 +1,22 @@
-<p>
-product works!
-</p>
+<div
+  class="flex justify-center items-center md:px-10 min-h-full bg-[#dae4ea]"
+>
+  <div
+    class="w-96 my-12 h-auto bg-[#f2f9fb] transition-all rounded-lg md:w-full p-4"
+  >
+    <div class="relative">
+      <input
+        class="w-full h-12 text-sm outline-none border mt-3 rounded-lg transition-all pl-7 pr-20 focus:border-blue-600"
+        type="text"
+        placeholder="Search tasks like product pages,product photos etc."
+      />
+      <i class="absolute top-7 text-[#bfc6cd] left-2 fa fa-search"></i>
+      <button
+        class="absolute right-2 rounded-lg cursor-pointer transition-all hover:bg-blue-900 top-4 h-10 w-16 bg-blue-500 text-white text-sm"
+      >
+        Search
+      </button>
+    </div>
+    <app-product-list></app-product-list>
+  </div>
+</div>
