@@ -1,4 +1,6 @@
 export interface Promotion {
   id: string;
-  percentage: number;
+  productId: string;
+  value: number;
+  quantity: number;
 }

@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     loadChildren: () =>
       import('./layout/layout.module').then((m) => m.LayoutModule),
   },
@@ -19,17 +19,17 @@ const routes: Routes = [
       import('./modules/product/product.module').then((m) => m.ProductModule),
   },
   {
-    path: 'auth',
+    path: 'account',
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
-  { path: '**', redirectTo: '/auth', pathMatch: 'full' },
+  { path: '**', redirectTo: 'account', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes, { enableTracing: true }),
+    RouterModule.forRoot(routes),
   ],
   exports: [RouterModule],
   declarations: [],

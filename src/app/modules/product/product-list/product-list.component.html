@@ -1,10 +1,10 @@
-<div class="flex mt-3 justify-between items-center">
+<div class="flex items-center justify-between mt-3">
   <p class="text-[#545968] text-sm font-semibold">Showing 291 tasks</p>
   <div>
     <div class="flex items-center gap-1">
-      <p class="text-xs mt-1">Sort by</p>
+      <p class="mt-1 text-xs">Sort by</p>
       <select
-        class="outline-none cursor-pointer h-6 w-20 text-sm font-semibold"
+        class="w-20 h-6 text-sm font-semibold outline-none cursor-pointer"
       >
         <option class="hidden">Size</option>
         <option>Date</option>
@@ -15,4 +15,6 @@
     </div>
   </div>
 </div>
-<app-product-item></app-product-item>
+<div class="gap-6 md:flex md:justify-center md:flex-wrap">
+  <app-product-item *ngFor="let item of 10 | enumerate"></app-product-item>
+</div>
